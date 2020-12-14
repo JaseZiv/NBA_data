@@ -5,7 +5,7 @@ name: run_scrapes
 # Controls when the action will run. 
 on:
   schedule:
-    - cron: "0 10 * * *"
+    - cron: "08 10 * * *"
 
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -28,5 +28,5 @@ jobs:
           git config --global user.name 'JaseZiv'
           git config --global user.email 'jaseziv83@gmail.com'
           git add .
-          git commit -m 'updating job_controller' || echo "No changes to commit"
+          git commit -m 'updating data' || echo "No changes to commit"
           git push || echo "No changes to commit"
