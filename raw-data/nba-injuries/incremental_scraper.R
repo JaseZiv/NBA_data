@@ -57,7 +57,7 @@ all_injuries <- all_injuries %>%
   distinct(Date, Team, Acquired, Relinquished, Notes, .keep_all = T)
 
 # write full raw output to file
-saveRDS(here::here("raw-data", "nba-injuries", "nba_injuries_complete_raw.rds"))
+saveRDS(all_injuries, here::here("raw-data", "nba-injuries", "nba_injuries_complete_raw.rds"))
 
 
 
