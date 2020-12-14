@@ -3,6 +3,7 @@ library(dplyr)
 library(rvest)
 library(httr)
 library(stringr)
+library(jsonlite)
 
 ###########################################################################
 # Scraper -----------------------------------------------------------------
