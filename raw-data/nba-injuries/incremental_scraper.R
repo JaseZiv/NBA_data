@@ -43,8 +43,7 @@ for (i in all_injuries_index:length(all_links)) {
   Sys.sleep(runif(1, 10, 18))
   # counter
   
-  if(all_injuries_index < all_injuries %>% pull(page_num) %>% unique() %>% as.numeric() %>% max()) {
-    all_injuries_index <- all_injuries_index + 1
+  if(all_injuries_index <= all_injuries %>% pull(page_num) %>% unique() %>% as.numeric() %>% max()) {
     
     print(paste("scraping page:", all_links[all_injuries_index]))
     url <- read_html(all_links[all_injuries_index])
@@ -62,6 +61,8 @@ for (i in all_injuries_index:length(all_links)) {
     each_page_df$page_num <- page_number[all_injuries_index]
     
     all_injuries <- bind_rows(all_injuries, each_page_df)
+    
+    all_injuries_index <- all_injuries_index + 1
   }
   
 }
