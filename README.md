@@ -5,6 +5,8 @@
 # NBA_data
 Repository to hold scraped NBA data from various sources.
 
+The data is consumed by Hashtag Basketball's fabulous Injury Analysis database that can be found [here](https://hashtagbasketball.com/nba-injury)
+
 ## The Data
 
 ### NBA Injury data
